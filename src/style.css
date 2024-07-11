@@ -1,0 +1,51 @@
+body{
+  font-family: Roboto;
+}
+
+ul {
+  list-style-type: none;
+  margin: 3em;
+  padding: 0;
+}
+
+li {
+  display: inline;
+}
+
+.li-right{
+  float: right;
+  text-decoration-line: none;
+  background-color: #1B94F1;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 3em;
+  padding-right: 3em;
+  border-radius: 2em;
+}
+
+a.li-right{
+  color: white;
+}
+
+img{
+  width: 3em;
+}
+
+.titulo{
+  text-align: center;
+}
+
+.conteo{
+  height: 6em;
+}
+
+input{
+  height: 10em;
+  width: 50%;
+  margin: 0 auto;
+  align-self: center;
+}
+
+.ingresar{
+  display: flex;
+}
