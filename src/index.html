@@ -11,7 +11,7 @@
 </head>
 
   <nav>
-    <ul>
+    <ul class="nav-ul">
       <li><img src="logo.png"></li>
       <li><a href="#" class="li-right">Analyze</a></li>
     </ul>
@@ -23,18 +23,31 @@
       <h7>Your ultimate text analysis tool</h7>
     </section>
     <section class="conteo">
+      <div class="container">
+        <ul>
+            <li>Caracteres:</li>
+            <li>Números:</li>
+        </ul>
+        <ul>
+            <li>Caracteres sin espacio: 30</li>
+            <li>Suma números: 30</li>
+        </ul>
+        <ul>
+            <li>Palabras: 30</li>
+            <li>Promedio longitud: 30</li>
+        </ul>
+    </div>
 
     </section>
     <section>
       <div class="ingresar">
-        <input type="text" maxlength="100" required/>
+        <textarea name="user-input" rows="10" cols="50"></textarea>
       </div>
     </section>
   </main>
   <footer>
-
+    <h7>© 2024 AnalyzeText. All rights reserved.</h7>
   </footer>
-
 <body>
   <script src="index.js" type="module"></script>
 </body>

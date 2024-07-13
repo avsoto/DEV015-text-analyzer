@@ -1,8 +1,12 @@
 body{
   font-family: Roboto;
+  background-color: #ABD5F5;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-ul {
+.nav-ul{
   list-style-type: none;
   margin: 3em;
   padding: 0;
@@ -31,12 +35,18 @@ img{
   width: 3em;
 }
 
-.titulo{
+.titulo, footer{
   text-align: center;
+  color: #09385B;
 }
 
-.conteo{
-  height: 6em;
+footer{
+  margin-top: 3em;
+}
+
+.conteo-ul{
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 input{
@@ -49,3 +59,45 @@ input{
 .ingresar{
   display: flex;
 }
+
+h1{
+  font-size: 4em;
+  margin-top: 0em;
+  margin-bottom: 0.5em;
+  text-align: center;
+  color: #09385B;
+}
+
+h7{
+
+  margin-top: 5em;
+  margin-bottom: 1em;
+  font-size:small;
+}
+
+table{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.container ul {
+  list-style-type: none; /* Quita los puntos de la lista */
+  padding: 0;
+}
+
+.container ul li {
+  padding: 10px;
+}
+
