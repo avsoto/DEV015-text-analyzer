@@ -10,43 +10,41 @@
     </style>
 </head>
 
-  <nav>
+ <!--<nav>
     <ul class="nav-ul">
       <li><img src="logo.png"></li>
-      <li><a href="#" class="li-right">Analyze</a></li>
+      <li><a href="http://localhost:3000/" class="li-right">Analyze</a></li>
     </ul>
-  </nav>
+  </nav> -->
   <main>
-    <section class="titulo">
+    <header>
       <h4>Unlock the power of words with AnalizeText</h4>
       <h1>ANALYZE TEXT</h1>
       <h7>Your ultimate text analysis tool</h7>
-    </section>
+    </header>
     <section class="conteo">
       <div class="container">
         <ul>
-            <li>Caracteres:</li>
-            <li>Números:</li>
-        </ul>
-        <ul>
-            <li>Caracteres sin espacio: 30</li>
-            <li>Suma números: 30</li>
-        </ul>
-        <ul>
-            <li>Palabras: 30</li>
-            <li>Promedio longitud: 30</li>
+            <li class="stats" data-testid="character-count">Caracteres: 0</li>
+            <li class="stats" data-testid="number-count">Números: 0</li>
+            <li class="stats" data-testid="character-no-spaces-count">Caracteres sin espacio: 0</li>
+            <li class="stats" data-testid="number-sum">Suma números: 0</li>
+            <li class="stats" data-testid="word-count">Palabras: 0</li>
+            <li class="stats" data-testid="word-length-average">Promedio longitud:0</li>
         </ul>
     </div>
-
     </section>
     <section>
-      <div class="ingresar">
+      <div>
         <textarea name="user-input" rows="10" cols="50"></textarea>
+      </div>
+      <div class="button">
+        <button id="reset-button">Limpiar</button>
       </div>
     </section>
   </main>
   <footer>
-    <h7>© 2024 AnalyzeText. All rights reserved.</h7>
+    <p>© 2024 AnalyzeText. Ana Victoria Soto Mejia.</p>
   </footer>
 <body>
   <script src="index.js" type="module"></script>
