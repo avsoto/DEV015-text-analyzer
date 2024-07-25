@@ -49,35 +49,24 @@ const analyzer = {
 
   getNumberCount: (text) => {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
-
-    /* const wordArray = text.trim().split(/\s+/);
-    let contadorNumeros = 0;
-
-    for (let i = 0; i < wordArray.length; i++) {
-      if (!isNaN(wordArray[i]) && wordArray[i] !== '') {
-        contadorNumeros++;
-      }
-    }
-
-    return contadorNumeros;*/
     const wordArray = text.match(/-?\b\d+(\.\d+)?\b/g) || [];
     return wordArray.length;
   },
 
   getNumberSum: (text) => {
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
-    const numeros = /\d+/g;
+
+    const wordsArray = text.split(" ");
+
     let suma = 0;
 
-    const numerosEnTexto = text.match(numeros);
+    for (const word of wordsArray) {
 
-    if (numerosEnTexto !== null) {
-      numerosEnTexto.forEach(numeroStr => {
-        const numero = parseInt(numeroStr, 10); // Convertir la cadena a número entero
-        suma =suma + numero; // Sumar el número a 'suma'
-      });
+      const numero = Number(word);
+      if (  !isNaN(numero) ) {
+        suma = suma + numero
+      }
     }
-
     return suma;
   },
 };

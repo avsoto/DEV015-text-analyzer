@@ -22,7 +22,6 @@ input.addEventListener('input', function() {
 });
 
 
-
 document.getElementById("reset-button").addEventListener("click", () => {
   resetButton();
 });
@@ -43,3 +42,14 @@ function resetButton(){
     item.textContent = descriptions[index];
   });
 }
+
+window.onload = function() {
+  const initialData = ['Caracteres: 0', 'Números: 0', 'Caracteres sin espacio: 0', 'Suma números: 0', 'Palabras: 0', 'Promedio longitud: 0'];
+  const listItems = document.querySelectorAll('.container ul li');
+
+  listItems.forEach((li, index) => {
+    if (initialData[index]) {
+      li.textContent = initialData[index];
+    }
+  });
+};
