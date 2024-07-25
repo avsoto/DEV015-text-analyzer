@@ -1,8 +1,8 @@
-# Analizador de Texto
+# Analyze Text
 
 ## Descripción
 
-El **Analizador de Texto** es una aplicación web que permite analizar y obtener estadísticas de textos ingresados por el usuario. Este proyecto está diseñado para proporcionar funciones básicas como el conteo de palabras y caracteres, así como análisis más avanzados como la suma de números encontrados en el texto.
+**Analyze Text** es una aplicación web que permite analizar y obtener estadísticas de textos ingresados por el usuario. Este proyecto está diseñado para proporcionar funciones básicas como el conteo de palabras y caracteres, así como análisis más avanzados como la suma de números encontrados en el texto.
 
 ![Agregar un título](https://raw.githubusercontent.com/avsoto/DEV015-text-analyzer/main/src/presentation.jpg)
 
@@ -20,7 +20,7 @@ Configurar el entorno de desarrollo y desarrollar las funcionalidades básicas d
    - Configuración de GitHub Pages para el despliegue.
 
 2. **Desarrollo de funcionalidades básicas:**
-   - Diseño de la interfaz gráfica en alta fidelidad en Figma.
+   - Diseño de la interfaz gráfica en alta fidelidad en [Figma](https://www.figma.com/design/FK3fldaYVYv96vBiEvEgyo/Text-Analyzer?node-id=3-1727&t=PDWubHfN1v41koYw-1).
 
 ![Agregar un título](https://raw.githubusercontent.com/avsoto/DEV015-text-analyzer/main/src/figma-file.png)
 
