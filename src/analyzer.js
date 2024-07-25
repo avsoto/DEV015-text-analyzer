@@ -1,8 +1,6 @@
 const analyzer = {
   getWordCount: (text) => {
-    const metricItems = document.querySelectorAll('.container ul li');
     const variosBlancos = /[ ]+/g;
-
     text = text.trim();
 
     text = text.replace(variosBlancos," ");
@@ -10,32 +8,28 @@ const analyzer = {
     const words = text.split(" ");
     const num = words.length;
 
-    metricItems[4].innerHTML = "Palabras: " + `${num}`;
+    return num;
   },
 
   getCharacterCount: (text) => {
     //TODO: esta función debe retornar el recuento de caracteres que se encuentran en el parámetro `text` de tipo `string`.
-    const metricItems = document.querySelectorAll('.container ul li');
-
     const wordCount = text.length;
-    metricItems[0].innerHTML = "Caracteres: " + `${wordCount}`;
+    return wordCount;
   },
 
   getCharacterCountExcludingSpaces: (text) => {
     //TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
-    const metricItems = document.querySelectorAll('.container ul li');
     const caracteres =  /[^a-zA-Z0-9]/g;
 
     text = text.replace(/\s+/g, "");
     text = text.replace(caracteres,"");
 
     const wordCount = text.length;
-    metricItems[2].innerHTML = "Caracteres sin espacio: " + `${wordCount}`;
+    return wordCount;
   },
 
   getAverageWordLength: (text) => {
     //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
-    const metricItems = document.querySelectorAll('.container ul li');
     const variosBlancos = /[ ]+/g;
 
     text = text.trim().replace(variosBlancos, " ");
@@ -49,25 +43,29 @@ const analyzer = {
       totalLength += words[i].length;
     }
 
-    const averageWordLength = num > 0 ? (totalLength / num).toFixed(2) : 0;
-
-    metricItems[5].innerHTML = "Promedio longitud: " + `${averageWordLength}`;
-
+    const averageWordLength = num > 0 ? (totalLength / num) : 0;
+    return parseFloat(averageWordLength.toFixed(2));
   },
 
   getNumberCount: (text) => {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
-    const metricItems = document.querySelectorAll('.container ul li');
-    const numeros = /[^0-9]/g;
 
-    text = text.replace(numeros,"").length;
+    /* const wordArray = text.trim().split(/\s+/);
+    let contadorNumeros = 0;
 
-    metricItems[1].innerHTML = "Números: " + `${text}`;
+    for (let i = 0; i < wordArray.length; i++) {
+      if (!isNaN(wordArray[i]) && wordArray[i] !== '') {
+        contadorNumeros++;
+      }
+    }
+
+    return contadorNumeros;*/
+    const wordArray = text.match(/-?\b\d+(\.\d+)?\b/g) || [];
+    return wordArray.length;
   },
 
   getNumberSum: (text) => {
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
-    const metricItems = document.querySelectorAll('.container ul li');
     const numeros = /\d+/g;
     let suma = 0;
 
@@ -80,8 +78,7 @@ const analyzer = {
       });
     }
 
-    metricItems[3].innerHTML = "Suma números: " + `${suma}`;
-
+    return suma;
   },
 };
 

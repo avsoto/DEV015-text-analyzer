@@ -2,13 +2,23 @@ import analyzer from './analyzer.js';
 
 //TODO: escuchar eventos del DOM e invocar  los métodos del objeto `analyzer`
 
-document.querySelector("textarea").addEventListener('input', (event) => {
-  analyzer.getWordCount(event.target.value);
-  analyzer.getCharacterCount(event.target.value);
-  analyzer.getCharacterCountExcludingSpaces(event.target.value);
-  analyzer.getNumberCount(event.target.value);
-  analyzer.getNumberSum(event.target.value);
-  analyzer.getAverageWordLength(event.target.value);
+const input = document.querySelector("textarea");
+const characterCount = document.querySelector("li[data-testid=character-count]");
+const numberCount = document.querySelector("li[data-testid=number-count]");
+const characterNoSpacesCount = document.querySelector("li[data-testid=character-no-spaces-count]");
+const numberSum = document.querySelector("li[data-testid=number-sum]");
+const wordCount = document.querySelector("li[data-testid=word-count]");
+const wordLengthAverage = document.querySelector("li[data-testid=word-length-average]");
+
+
+input.addEventListener('input', function() {
+  characterCount.innerHTML = "Caracteres:" + analyzer.getCharacterCount(input.value);
+  numberCount.innerHTML = "Numeros:" + analyzer.getNumberCount(input.value);
+  characterNoSpacesCount.innerHTML = "Caracteres sin espacios:" + analyzer.getCharacterCountExcludingSpaces(input.value);
+  numberSum.innerHTML = "Suma numeros:" + analyzer.getNumberSum(input.value);
+  wordCount.innerHTML = "Palabras:" + analyzer.getWordCount(input.value);
+  wordLengthAverage.innerHTML = "Promedio longitud:" + analyzer.getAverageWordLength(input.value);
+
 });
 
 

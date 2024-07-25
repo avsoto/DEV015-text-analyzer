@@ -79,7 +79,7 @@ ul{
 
 .stats:hover {
   background-color: #dbeeff;
-  color: #09385B;
+  color: hsl(206, 82%, 20%);
 }
 
 
