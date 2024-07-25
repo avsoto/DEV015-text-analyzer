@@ -12,12 +12,12 @@ const wordLengthAverage = document.querySelector("li[data-testid=word-length-ave
 
 
 input.addEventListener('input', function() {
-  characterCount.innerHTML = "Caracteres:" + analyzer.getCharacterCount(input.value);
-  numberCount.innerHTML = "Numeros:" + analyzer.getNumberCount(input.value);
-  characterNoSpacesCount.innerHTML = "Caracteres sin espacios:" + analyzer.getCharacterCountExcludingSpaces(input.value);
-  numberSum.innerHTML = "Suma numeros:" + analyzer.getNumberSum(input.value);
-  wordCount.innerHTML = "Palabras:" + analyzer.getWordCount(input.value);
-  wordLengthAverage.innerHTML = "Promedio longitud:" + analyzer.getAverageWordLength(input.value);
+  characterCount.innerHTML = "Characters: " + analyzer.getCharacterCount(input.value);
+  numberCount.innerHTML = "Numbers: " + analyzer.getNumberCount(input.value);
+  characterNoSpacesCount.innerHTML = "Character excluding spaces: " + analyzer.getCharacterCountExcludingSpaces(input.value);
+  numberSum.innerHTML = "Number sum: " + analyzer.getNumberSum(input.value);
+  wordCount.innerHTML = "Words: " + analyzer.getWordCount(input.value);
+  wordLengthAverage.innerHTML = "Average word length: " + analyzer.getAverageWordLength(input.value);
 
 });
 
@@ -28,12 +28,12 @@ document.getElementById("reset-button").addEventListener("click", () => {
 
 function resetButton(){
   const descriptions = [
-    "Caracteres: 0",
-    "Números: 0",
-    "Caracteres sin espacio: 0",
-    "Suma números: 0",
-    "Palabras: 0",
-    "Promedio longitud: 0"
+    "Characters: 0",
+    "Numbers: 0",
+    "Character excluding spaces: 0",
+    "Number sum: 0",
+    "Words: 0",
+    "Average word length: 0"
   ];
 
   document.querySelector("textarea").value = "";
@@ -44,7 +44,7 @@ function resetButton(){
 }
 
 window.onload = function() {
-  const initialData = ['Caracteres: 0', 'Números: 0', 'Caracteres sin espacio: 0', 'Suma números: 0', 'Palabras: 0', 'Promedio longitud: 0'];
+  const initialData = ['Characters: 0', 'Numbers: 0', 'Character excluding spaces: 0', 'Number sum: 0', 'Words: 0', 'Average word length: 0'];
   const listItems = document.querySelectorAll('.container ul li');
 
   listItems.forEach((li, index) => {

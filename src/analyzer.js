@@ -1,40 +1,30 @@
 const analyzer = {
   getWordCount: (text) => {
-    const variosBlancos = /[ ]+/g;
-    text = text.trim();
+    const whiteSpaces = /[ ]+/g;
 
-    text = text.replace(variosBlancos," ");
-
-    const words = text.split(" ");
-    const num = words.length;
-
-    return num;
+    const words = text.split("").replace(whiteSpaces," ").trim();
+    return words.length;
   },
 
   getCharacterCount: (text) => {
     //TODO: esta función debe retornar el recuento de caracteres que se encuentran en el parámetro `text` de tipo `string`.
-    const wordCount = text.length;
-    return wordCount;
+    return text.length;
   },
 
   getCharacterCountExcludingSpaces: (text) => {
     //TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
-    const caracteres =  /[^a-zA-Z0-9]/g;
+    const characters =  /[^a-zA-Z0-9]/g;
 
     text = text.replace(/\s+/g, "");
-    text = text.replace(caracteres,"");
+    text = text.replace(characters,"");
 
-    const wordCount = text.length;
-    return wordCount;
+    return text.length;
   },
 
   getAverageWordLength: (text) => {
     //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
-    const variosBlancos = /[ ]+/g;
-
-    text = text.trim().replace(variosBlancos, " ");
-
-    const words = text.split(" ");
+    const whiteSpaces = /[ ]+/g;
+    const words = text.split(" ").trim().replace(whiteSpaces, " ");
     const num = words.length;
 
     let totalLength = 0;
