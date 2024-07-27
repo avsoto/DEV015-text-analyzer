@@ -12,7 +12,6 @@ header, footer{
   color: #09385B;
 }
 
-
 #reset-button{
   margin: auto;
   width: 300px;
@@ -40,7 +39,6 @@ div{
   flex-direction: column-reverse;
   align-items: center;
 }
-
 
 h1{
   font-size: 4em;

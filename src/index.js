@@ -10,7 +10,6 @@ const numberSum = document.querySelector("li[data-testid=number-sum]");
 const wordCount = document.querySelector("li[data-testid=word-count]");
 const wordLengthAverage = document.querySelector("li[data-testid=word-length-average]");
 
-
 input.addEventListener('input', function() {
   characterCount.innerHTML = "Characters: " + analyzer.getCharacterCount(input.value);
   numberCount.innerHTML = "Numbers: " + analyzer.getNumberCount(input.value);
@@ -18,9 +17,7 @@ input.addEventListener('input', function() {
   numberSum.innerHTML = "Number sum: " + analyzer.getNumberSum(input.value);
   wordCount.innerHTML = "Words: " + analyzer.getWordCount(input.value);
   wordLengthAverage.innerHTML = "Average word length: " + analyzer.getAverageWordLength(input.value);
-
 });
-
 
 document.getElementById("reset-button").addEventListener("click", () => {
   resetButton();
